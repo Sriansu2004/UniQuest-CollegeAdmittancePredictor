@@ -1,5 +1,4 @@
 package Action;
-
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
@@ -11,7 +10,7 @@ public class Admin_login extends HttpServlet {
         String pass = request.getParameter("pass");
 
         if ("admin".equalsIgnoreCase(name) && "admin".equalsIgnoreCase(pass)) {
-            response.sendRedirect("admin_home.jsp?success");
+            response.sendRedirect("admin_home.jsp");
         } else {
             response.sendRedirect("login.jsp?error=invalid");
         }
