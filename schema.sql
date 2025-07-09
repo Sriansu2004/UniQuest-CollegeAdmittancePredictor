@@ -1,3 +1,6 @@
+CREATE DATABASE college_predictor;
+USE college_predictor;
+
 CREATE TABLE student (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100),
