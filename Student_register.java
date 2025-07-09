@@ -1,5 +1,4 @@
 package Action;
-
 import DBconnection.SQLconnection;
 import java.io.*;
 import java.sql.*;
@@ -20,12 +19,8 @@ public class Student_register extends HttpServlet {
             ps.setString(2, mail);
             ps.setString(3, pass);
             ps.setInt(4, cutoff);
-            int result = ps.executeUpdate();
-            if (result > 0) {
-                response.sendRedirect("login.jsp?register=success");
-            } else {
-                response.sendRedirect("register.jsp?register=fail");
-            }
+            ps.executeUpdate();
+            response.sendRedirect("login.jsp?register=success");
         } catch (Exception e) {
             e.printStackTrace();
         }
